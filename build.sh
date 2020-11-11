@@ -1,3 +1,3 @@
-mkdir -p bin
+mkdir --parents bin
 cmake -S . -B ./bin
-make -C ./bin
+make --silent --directory ./bin
