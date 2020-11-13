@@ -29,8 +29,8 @@ if(NOT CMAKE_DEBUG_POSTFIX)
 endif()
 
 # Variables
-set(SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp other.cpp)
-set(HEADER_FILES ${CMAKE_CURRENT_SOURCE_DIR}/other.hpp)
+set(SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp ${CMAKE_CURRENT_SOURCE_DIR}/src/other.cpp)
+set(HEADER_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/other.hpp)
 
 # Define library target
 add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${HEADER_FILES})
