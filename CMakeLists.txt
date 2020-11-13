@@ -35,5 +35,6 @@ set(HEADER_FILES ${CMAKE_CURRENT_SOURCE_DIR}/other.hpp)
 # Define library target
 add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${HEADER_FILES})
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_compile_options(${PROJECT_NAME} PRIVATE -Werror -Wall -Wextra -pedantic)
+target_compile_options(${PROJECT_NAME} PRIVATE -pg -g)
+target_link_options(${PROJECT_NAME} PRIVATE -pg)
 target_precompile_headers(${PROJECT_NAME} PUBLIC /usr/include/x86_64-linux-gnu/c++/9/bits/stdc++.h)
